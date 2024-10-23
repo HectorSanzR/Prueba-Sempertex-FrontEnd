@@ -1,0 +1,11 @@
+Archivos Documentados por Hector Sanchez
+
+src\router\AppRouter.jsx
+src\calendar\components\Navbar.jsx
+src\helpers\calendarLocalizer.js
+src\calendar\components\CalendarEvent.jsx
+src\calendar\components\CalendarModal.jsx
+src\api\calendarApi.js
+src\hooks\useCalendarStore.js
+src\hooks\useUiStore.js
+src\store\calendar\calendarSlice.js
