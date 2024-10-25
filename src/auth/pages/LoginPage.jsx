@@ -45,7 +45,7 @@ export const LoginPage = () => {
 
     useEffect(() => {
         if (errorMessage !== undefined){
-            Swal.fire('Error en la autenticacion', errorMessage,'error')
+            Swal.fire('Error en la autenticacion ', 'La contraseña debe tener mas de 6 caracteres','error')
 
         
       }

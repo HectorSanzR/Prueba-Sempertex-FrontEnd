@@ -103,6 +103,12 @@ const onSelectPriorityChange = (e) =>{
 })
 }
 
+const onSelectTittleChange = (e) =>{
+    setFormValues({
+        ...formValues,
+         ["title"]:e.value
+})
+}
     const onCloseModal = ()=>{
         closeDateModal();
         }
@@ -138,6 +144,12 @@ const onSelectPriorityChange = (e) =>{
     { value: 'Alta', label: 'Alta' },
     { value: 'Media', label: 'Media' },
     { value: 'Baja', label: 'Baja' }
+  ]
+
+  const titelOption = [
+    { value: 'Preuba1', label: 'Preuba1' },
+    { value: 'Preuba2', label: 'Preuba2' },
+    { value: 'Preuba3', label: 'Preuba3' }
   ]
   // estatus del evento
   const optionsStatus = [
@@ -196,6 +208,14 @@ const onSelectPriorityChange = (e) =>{
                 <hr />
                 <div className="form-group mb-2">
                     <label>Titulo</label>
+
+
+                    <Select
+                            options={titelOption}
+                            onChange={(event) => onSelectTittleChange(event)}
+                            value={titelOption.find(option => option.value === formValues.title)} // valor por defecto
+                            />
+{/*                    
                     <input 
                         type="text" 
                         className={` form-control ${titleClass}` }
@@ -204,7 +224,7 @@ const onSelectPriorityChange = (e) =>{
                         autoComplete="off"
                         value={formValues.title}
                         onChange ={onInputChange}
-                    />
+                    /> */}
                     <label>Estado</label>
                     <Select
                             options={optionsStatus}
